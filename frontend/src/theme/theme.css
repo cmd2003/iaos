@@ -1,18 +1,18 @@
 :root {
-  /* Cap Corporate — white theme, navy authority + gold accent */
-  --navy: #0b1f3a;
-  --navy-deep: #071528;
-  --navy-tint: #eef1f6; /* light navy wash for active/hover surfaces */
-  --gold: #b8862b;
-  --gold-strong: #9a6f1f;
-  --gold-tint: #faf4e6;
-  --ink: #0f172a;
-  --slate: #51607a;
-  --slate-soft: #7b8698;
-  --canvas: #f7f8fa; /* app background */
+  /* Cap Corporate — white theme, Indigo authority + Violet accent */
+  --navy: #2e3a87;
+  --navy-deep: #1e2b7a;
+  --navy-tint: #eef2ff; /* light indigo wash for active/hover surfaces */
+  --gold: #7c3aed;
+  --gold-strong: #6d28d9;
+  --gold-tint: #f5f3ff;
+  --ink: #101828;
+  --slate: #5b628f;
+  --slate-soft: #818cf8;
+  --canvas: #f8fafc; /* app background */
   --surface: #ffffff;
-  --line: #e5e8ee;
-  --line-soft: #eef0f4;
+  --line: #e2e8f0;
+  --line-soft: #f1f5f9;
   --success: #12805c;
   --success-tint: #e7f4ef;
   --danger: #b42318;
