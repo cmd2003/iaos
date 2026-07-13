@@ -1,8 +1,5 @@
 import type { ModuleConfig } from "../registry";
-import { lazy } from "react";
-
-// Lazily load the main page component
-const QualityControlRejectionsPage = lazy(() => import("./QualityControlRejectionsPage"));
+import QualityControlRejectionsPage from "./QualityControlRejectionsPage";
 
 const config: ModuleConfig = {
   slug: "quality_control_rejections",
