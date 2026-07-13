@@ -86,6 +86,32 @@ export default function QualityControlRejectionsPage() {
 
   return (
     <div style={{ display: "flex", gap: 24, minHeight: "calc(100vh - 180px)", alignItems: "flex-start" }}>
+      <style>{`
+        .inner-subnav-btn {
+          text-align: left;
+          padding: 8px 12px;
+          border-radius: var(--radius-sm);
+          font-size: 13.5px;
+          font-weight: 500;
+          background: transparent;
+          color: var(--slate);
+          transition: all 0.1s ease;
+          cursor: pointer;
+          display: block;
+          width: 100%;
+          border: none;
+        }
+        .inner-subnav-btn:hover {
+          background: var(--line-soft) !important;
+          color: var(--navy);
+        }
+        .inner-subnav-btn.active {
+          font-weight: 600;
+          background: var(--navy-tint) !important;
+          color: var(--navy) !important;
+        }
+      `}</style>
+
       {/* Inner Sub-Navigation Sidebar */}
       <div
         className="card"
@@ -150,27 +176,7 @@ export default function QualityControlRejectionsPage() {
                   <button
                     key={p.id}
                     onClick={() => setSelectedPageId(p.id)}
-                    style={{
-                      textAlign: "left",
-                      padding: "8px 12px",
-                      borderRadius: "var(--radius-sm)",
-                      fontSize: 13.5,
-                      fontWeight: selectedPageId === p.id ? 600 : 500,
-                      background: selectedPageId === p.id ? "var(--navy-tint)" : "transparent",
-                      color: selectedPageId === p.id ? "var(--navy)" : "var(--slate)",
-                      transition: "all 0.1s ease",
-                      cursor: "pointer",
-                    }}
-                    onMouseEnter={(e) => {
-                      if (selectedPageId !== p.id) {
-                        e.currentTarget.style.background = "var(--line-soft)";
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (selectedPageId !== p.id) {
-                        e.currentTarget.style.background = "transparent";
-                      }
-                    }}
+                    className={`inner-subnav-btn ${selectedPageId === p.id ? "active" : ""}`}
                   >
                     {p.id}. {p.name}
                   </button>
@@ -218,27 +224,7 @@ export default function QualityControlRejectionsPage() {
                   <button
                     key={p.id}
                     onClick={() => setSelectedPageId(p.id)}
-                    style={{
-                      textAlign: "left",
-                      padding: "8px 12px",
-                      borderRadius: "var(--radius-sm)",
-                      fontSize: 13.5,
-                      fontWeight: selectedPageId === p.id ? 600 : 500,
-                      background: selectedPageId === p.id ? "var(--navy-tint)" : "transparent",
-                      color: selectedPageId === p.id ? "var(--navy)" : "var(--slate)",
-                      transition: "all 0.1s ease",
-                      cursor: "pointer",
-                    }}
-                    onMouseEnter={(e) => {
-                      if (selectedPageId !== p.id) {
-                        e.currentTarget.style.background = "var(--line-soft)";
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      if (selectedPageId !== p.id) {
-                        e.currentTarget.style.background = "transparent";
-                      }
-                    }}
+                    className={`inner-subnav-btn ${selectedPageId === p.id ? "active" : ""}`}
                   >
                     {p.id}. {p.name}
                   </button>
