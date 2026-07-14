@@ -8,7 +8,8 @@ export default defineConfig(({ mode }) => {
   return {
     plugins: [react()],
     server: {
-      port: 5173,
+      // Honor an assigned PORT (preview harness / CI); default to 5173 locally.
+      port: process.env.PORT ? Number(process.env.PORT) : 5173,
       proxy: {
         // Dev: forward API calls to the FastAPI backend.
         "/api": target,
